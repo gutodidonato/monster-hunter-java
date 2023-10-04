@@ -6,6 +6,8 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import javafx.fxml.FXML;
@@ -38,6 +40,7 @@ public class PrimaryController{
 
     private List<Monstro> jsonParaList(String json) {
         var mapper = new ObjectMapper();
+        mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         try {
             var results = mapper.readTree(json);
             List<Monstro> monstros = new ArrayList<>();

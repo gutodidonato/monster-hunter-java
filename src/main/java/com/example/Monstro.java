@@ -1,5 +1,7 @@
 package com.example;
 
+import java.util.List;
+
 public class Monstro {
 
     private int id;
@@ -125,5 +127,9 @@ public class Monstro {
 
     public class MonsterReward {
         // Campos da classe MonsterReward
+    }
+
+    public class MonsterSpecies {
+        // Campos da classe MonsterSpecies
     }
 }
